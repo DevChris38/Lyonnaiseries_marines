@@ -17,6 +17,15 @@
     />
   </head>
   <body>
+    <script>
+      window.addEventListener(
+        "load",
+        function () {
+          window.scrollTo(0, 0);
+        },
+        false
+      );
+    </script>
     <svg
       class="accueil__logo"
       viewBox="0 0 871 1349"
@@ -443,5 +452,28 @@
     <nav>
       <h1>La nouvelle marque lyonnaise de bijoux fantaisie</h1>
     </nav>
+    <main>
+      <section id="main__concept">
+        <h2>LE CONCEPT</h2>
+        <p>
+          Créations lyonnaises qui font autant plaisir à créer qu'à recevoir.
+        </p>
+        <p>Modèles uniques et personnalisations possibles</p>
+      </section>
+      <img id="main__concept--image" alt="image de la ville de Lyon" />
+      <section id="main__produits">
+        <h2>LES DERNIERES CREATIONS</h2>
+        <span id="main__produits--images">
+          <div><h2>Boucles d'oreilles</h2></div>
+          <img id="main__produits--BO" alt="image de boucles d'oreilles" />
+
+          <div><h2>Colliers</h2></div>
+          <img id="main__produits--Collier" alt="image d'un collier" />
+
+          <div><h2>Bracelets</h2></div>
+          <img id="main__produits--Bracelet" alt="image d'un bracelet" />
+        </span>
+      </section>
+    </main>
   </body>
 </html>

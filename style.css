@@ -1,8 +1,25 @@
-:root {
+* {
   --animation_letter: shakeY;
   --animation_letter_duration: 2s;
   --animation_letter_delay: 0.05s;
   --animation_stars: flash;
+}
+@keyframes logo_placement {
+  to {
+    position: absolute;
+    left: 5vw;
+    top: 10px;
+    height: 25vh;
+  }
+}
+
+@keyframes nav_apparition {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 * {
@@ -12,25 +29,31 @@
   font-family: "Quicksand-Regular", "Quicksand";
 }
 
+h1 {
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  text-align: center;
+}
+
+h2 {
+  color: rgb(93, 140, 170);
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  margin: 10px 0px;
+}
+
 body {
   width: 100vw;
-  height: 100vh;
-}
-
-nav {
-  position: absolute;
-  top: 10px;
-  left: calc((25vh / 1.55) + 10vw);
-  width: calc(85vw - (25vh / 1.55));
-  height: 25vh;
-  border: 1px solid red;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-h1 {
-  text-align: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow: scroll;
 }
 
 .accueil__logo {
@@ -187,19 +210,220 @@ h1 {
   animation-duration: 2s;
 }
 
-@keyframes logo_placement {
-  to {
-    position: absolute;
-    left: 5vw;
-    top: 10px;
-    height: 25vh;
-  }
-}
-
 .accueil__logo {
   animation-delay: 2s;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
   animation-name: logo_placement;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0%;
+  animation: nav_apparition;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+main {
+  width: 100%;
+  display: flex;
+}
+
+#main__concept {
+  animation: nav_apparition;
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#main__concept--image {
+  animation: nav_apparition;
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-delay: 2.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#main__produits > h2 {
+  animation: nav_apparition;
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-delay: 2.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#main__produits {
+  display: flex;
+}
+
+#main__produits--images > img {
+  animation: nav_apparition;
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#main__produits--images > img:first-of-type {
+  animation-delay: 3s;
+}
+
+#main__produits--images > img:nth-of-type(2) {
+  animation-delay: 3.3s;
+}
+
+#main__produits--images > img:nth-of-type(3) {
+  animation-delay: 3.7s;
+}
+
+#main__produits--images > div:first-of-type {
+  margin-top: 10px;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 1;
+}
+
+#main__produits--images > div:nth-of-type(2) {
+  margin-top: 10px;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 1;
+}
+
+#main__produits--images > div:nth-of-type(3) {
+  margin-top: 10px;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 1;
+}
+
+span {
+  width: 300px;
+}
+
+#main__produits--images > div:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 33%);
+}
+
+#main__produits--images > div > h2 {
+  display: none;
+}
+
+#main__produits--images > div:hover > h2 {
+  color: white;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  @keyframes logo_placement {
+    to {
+      position: absolute;
+      left: calc((100vw - (25vh / 1.55)) / 2);
+      top: 10px;
+      height: 25vh;
+    }
+  }
+
+  h1,
+  h2,
+  p {
+    text-align: center;
+  }
+  nav {
+    margin-top: 26vh;
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(
+      358deg,
+      rgb(93, 140, 170),
+      rgba(255, 0, 0, 0) 23%
+    );
+  }
+
+  #main__concept--image {
+    content: url("./assets/lyonPaysageFinMobile.jpg");
+  }
+
+  main {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #main__produits {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  #main__produits--BO {
+    content: url("./assets/bouclesOreillesMobile.jpg");
+  }
+
+  #main__produits--Collier {
+    content: url("./assets/CollierMobile.jpg");
+  }
+
+  #main__produits--Bracelet {
+    content: url("./assets/BraceletMobile.jpg");
+  }
+}
+
+@media screen and (min-width: 769px) {
+  @keyframes logo_placement {
+    to {
+      position: absolute;
+      left: 5vw;
+      top: 10px;
+      height: 25vh;
+    }
+  }
+
+  nav {
+    margin-top: 10px;
+    margin-left: calc((25vh / 1.55) + 10vw);
+    width: calc(85vw - (25vh / 1.55));
+    height: 25vh;
+    background: linear-gradient(
+      359deg,
+      rgb(93, 140, 170),
+      rgba(255, 0, 0, 0) 10%
+    );
+  }
+
+  #main__concept {
+    width: 70%;
+  }
+  #main__concept--img {
+    width: 25%;
+    margin-left: 2.5%;
+    content: url("/assets/lyon.jpeg");
+  }
+
+  #main__produits--BO {
+    content: url("./assets/bouclesOreillesDesktop.jpg");
+  }
+
+  #main__produits--Collier {
+    content: url("./assets/CollierDesktop.jpg");
+  }
+
+  #main__produits--Bracelet {
+    content: url("./assets/BraceletDesktopFin.jpg");
+  }
 }
