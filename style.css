@@ -414,7 +414,7 @@ h1 {
     width: 50%;
     margin: 0 25%;
     height: auto;
-    content: url("/assets/Marine-Gueydan.jpg");
+    content: url("./assets/Marine-Gueydan.jpg");
   }
 
   #main__logo {
@@ -424,7 +424,7 @@ h1 {
   }
   #main__logo--image {
     width: 35%;
-    content: url("/assets/logo.png");
+    content: url("./assets/logo.png");
   }
   #main__temoins {
     width: 100%;
@@ -594,7 +594,7 @@ h1 {
   #main__creatrice--image {
     width: 25%;
     margin-left: 2.5%;
-    content: url("/assets/Marine-Gueydan.jpg");
+    content: url("./assets/Marine-Gueydan.jpg");
   }
 
   #main__logo {
@@ -605,7 +605,7 @@ h1 {
   }
   #main__logo--image {
     width: 35%;
-    content: url("/assets/logo.png");
+    content: url("./assets/logo.png");
   }
   #main__temoins {
     width: 100%;
