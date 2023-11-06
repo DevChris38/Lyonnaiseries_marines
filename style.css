@@ -4,14 +4,6 @@
   --animation_letter_delay: 0.05s;
   --animation_stars: flash;
 }
-/*@keyframes logo_placement {
-  to {
-    position: absolute;
-    left: 5vw;
-    top: 10px;
-    height: 25vh;
-  }
-}*/
 
 * {
   margin: 0;
@@ -300,24 +292,42 @@ h1 {
 
   @keyframes logo_placement {
     from {
-      transform: translate(0, 100%) scale(3);
+      transform: translate(0, 200%) scale(3);
+    }
+  }
+
+  @keyframes nav_apparition {
+    from {
+      background: linear-gradient(
+        358.8deg,
+        rgb(93, 140, 170),
+        rgba(255, 0, 0, 0) 0%
+      );
+    }
+    to {
+      background: linear-gradient(
+        358.8deg,
+        rgb(93, 140, 170),
+        rgba(255, 0, 0, 0) 6%
+      );
     }
   }
 
   nav {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
-
-  nav {
-    width: 100%;
     background: linear-gradient(
-      358deg,
+      358.8deg,
       rgb(93, 140, 170),
-      rgba(255, 0, 0, 0) 10%
+      rgba(255, 0, 0, 0) 6%
     );
+    animation-name: nav_apparition;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
   }
 
   h1 {
@@ -396,19 +406,18 @@ h1 {
   }
 
   #main__creatrice {
-    width: 70%;
     display: flex;
     flex-wrap: wrap;
     align-items: space-around;
   }
   #main__creatrice--image {
-    width: 30%;
+    width: 50%;
+    margin: 0 25%;
     height: auto;
     content: url("/assets/Marine-Gueydan.jpg");
   }
 
   #main__logo {
-    width: 65%;
     display: flex;
     flex-wrap: wrap;
     align-items: space-around;
