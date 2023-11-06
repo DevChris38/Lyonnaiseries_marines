@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 812 863" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+<svg width="100%" height="100%" viewBox="0 0 812 690" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
     <g transform="matrix(1,0,0,1,-133.974,-87.8987)">
         <g transform="matrix(6.07059e-17,0.8138,-0.852471,4.28477e-17,2510.1,-363.996)">
             <path d="M560.409,2317.53C560.409,2548.72 747.826,2736.14 979.016,2736.14C1210.21,2736.14 1397.62,2548.72 1397.62,2317.53L979.016,2317.53L560.409,2317.53Z" style="fill:rgb(93,140,170);stroke:white;stroke-width:10px;"/>
@@ -28,9 +28,6 @@
         </g>
         <g transform="matrix(0.809766,0,0,0.809766,213.597,-1415.51)">
             <text x="414.103px" y="2415.92px" style="font-family:'SweetHeartRegular', 'Sweet Heart';font-size:226.403px;fill:rgb(93,140,170);">M</text>
-        </g>
-        <g transform="matrix(1,0,0,1,-94.9091,120)">
-            <text x="221.363px" y="814.545px" style="font-family:'Quicksand-Regular', 'Quicksand';font-size:80px;">L<tspan x="262.163px 307.203px " y="814.545px 814.545px ">yo</tspan>nnaiseries marines</text>
         </g>
     </g>
 </svg>

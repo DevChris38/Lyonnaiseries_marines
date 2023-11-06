@@ -4,23 +4,14 @@
   --animation_letter_delay: 0.05s;
   --animation_stars: flash;
 }
-@keyframes logo_placement {
+/*@keyframes logo_placement {
   to {
     position: absolute;
     left: 5vw;
     top: 10px;
     height: 25vh;
   }
-}
-
-@keyframes nav_apparition {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
-  }
-}
+}*/
 
 * {
   margin: 0;
@@ -30,17 +21,21 @@
 }
 
 h1 {
-  font-size: clamp(1rem, 2.5vw, 3rem);
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
   text-align: center;
 }
 
 h2 {
-  color: rgb(93, 140, 170);
-  margin-bottom: 10px;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  text-align: center;
 }
 
+h3,
+h4 {
+  color: rgb(93, 140, 170);
+}
 p {
-  margin: 10px 0;
+  font-size: clamp(0.7rem, 1vw, 2.5rem);
 }
 
 img {
@@ -48,19 +43,12 @@ img {
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  overflow: scroll;
-}
-
-.accueil__logo {
-  position: absolute;
-  top: 25vh;
-  left: calc((100vw - (50vh / 1.55)) / 2);
-  height: 50vh;
+  justify-content: center;
 }
 
 .accueil__logo--L {
@@ -213,21 +201,9 @@ body {
 .accueil__logo {
   animation-delay: 2s;
   animation-duration: 1s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
   animation-name: logo_placement;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0%;
-  animation: nav_apparition;
-  animation-duration: 1s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
 }
 
 main {
@@ -235,8 +211,26 @@ main {
   display: flex;
 }
 
+@keyframes title_apparition {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+h1 {
+  animation: title_apparition;
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
 #main__concept {
-  animation: nav_apparition;
+  animation: title_apparition;
   opacity: 0%;
   animation-duration: 1s;
   animation-delay: 2s;
@@ -245,7 +239,7 @@ main {
 }
 
 #main__concept--image {
-  animation: nav_apparition;
+  animation: title_apparition;
   opacity: 0%;
   animation-duration: 1s;
   animation-delay: 2.3s;
@@ -253,8 +247,8 @@ main {
   animation-timing-function: ease-in-out;
 }
 
-#main__produits > h2 {
-  animation: nav_apparition;
+#main__produits h2 {
+  animation: title_apparition;
   opacity: 0%;
   animation-duration: 1s;
   animation-delay: 2.7s;
@@ -262,82 +256,30 @@ main {
   animation-timing-function: ease-in-out;
 }
 
-#main__produits {
-  display: flex;
-}
-
-#main__produits--images > img {
-  animation: nav_apparition;
+#main__produits img,
+#main__produits div {
+  animation: title_apparition;
   opacity: 0%;
   animation-duration: 1s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
 
-#main__produits--images > img:first-of-type {
-  animation-delay: 3s;
-}
-
-#main__produits--images > img:nth-of-type(2) {
-  animation-delay: 3.3s;
-}
-
-#main__produits--images > img:nth-of-type(3) {
-  animation-delay: 3.7s;
-}
-
-#main__produits--images > div:first-of-type {
-  margin-top: 10px;
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  z-index: 1;
-}
-
-#main__produits--images > div:nth-of-type(2) {
-  margin-top: 10px;
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  z-index: 1;
-}
-
-#main__produits--images > div:nth-of-type(3) {
-  margin-top: 10px;
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  z-index: 1;
-}
-
-span {
-  width: 300px;
-}
-
-#main__produits--images > div:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 33%);
-}
-
-#main__produits--images > div > h2 {
-  display: none;
-}
-
-#main__produits--images > div:hover > h2 {
-  color: white;
-  display: inline-block;
+#main__creatrice,
+#main__creatrice--image {
+  animation: title_apparition;
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
-  @keyframes logo_placement {
-    to {
-      position: absolute;
-      left: calc((100vw - (25vh / 1.55)) / 2);
-      top: 10px;
-      height: 25vh;
-    }
+  section {
+    margin: 10px 0;
+    width: 100%;
   }
 
   h1,
@@ -345,15 +287,43 @@ span {
   p {
     text-align: center;
   }
+
+  h2 {
+    color: rgb(93, 140, 170);
+    width: 100%;
+    margin: 10px 0 5px 0;
+  }
+
+  .accueil__logo {
+    height: 20vh;
+  }
+
+  @keyframes logo_placement {
+    from {
+      transform: translate(0, 100%) scale(3);
+    }
+  }
+
   nav {
-    margin-top: 26vh;
-    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav {
     width: 100%;
     background: linear-gradient(
       358deg,
       rgb(93, 140, 170),
-      rgba(255, 0, 0, 0) 23%
+      rgba(255, 0, 0, 0) 10%
     );
+  }
+
+  h1 {
+    margin: 10px 0;
+    font-size: clamp(0.5em, 3vw, 3em);
+    width: 100%;
   }
 
   #main__concept--image {
@@ -363,12 +333,54 @@ span {
   main {
     flex-wrap: wrap;
     justify-content: center;
+    width: 90%;
   }
 
   #main__produits {
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+  }
+
+  #main__produits--images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .main__produits--images--container {
+    position: relative;
+    width: 80%;
+  }
+
+  .main__produits--images--title {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .main__produits--images--title:hover {
+    background-color: hsla(0, 0%, 0%, 30%);
+  }
+
+  .main__produits--images--title h2 {
+    margin: 0;
+    color: white;
+    opacity: 100%;
+  }
+
+  .main__produits--images--container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
   }
 
   #main__produits--BO {
@@ -382,37 +394,136 @@ span {
   #main__produits--Bracelet {
     content: url("./assets/BraceletMobile.jpg");
   }
+
+  #main__creatrice {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-around;
+  }
+  #main__creatrice--image {
+    width: 30%;
+    height: auto;
+    content: url("/assets/Marine-Gueydan.jpg");
+  }
+
+  #main__logo {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-around;
+  }
+  #main__logo--image {
+    width: 35%;
+    content: url("/assets/logo.png");
+  }
+  #main__temoins {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+  }
+  #main__temoins p {
+    width: 25%;
+  }
+
+  #main__temoins h2 {
+    width: 100%;
+  }
+
+  #main__temoins--textes {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  #instaLogo {
+    width: 20%;
+  }
 }
 
 @media screen and (min-width: 769px) {
+  .accueil__logo {
+    height: 100%;
+  }
+
+  h2 {
+    color: rgb(93, 140, 170);
+    width: 100%;
+    margin: 50px 0 20px 0;
+  }
+
   @keyframes logo_placement {
+    from {
+      transform: translate(450%, 130%) scale(3);
+    }
+  }
+
+  @keyframes nav_apparition {
+    from {
+      background: linear-gradient(
+        359deg,
+        rgb(93, 140, 170),
+        rgba(255, 0, 0, 0) 0%
+      );
+    }
     to {
-      position: absolute;
-      left: 5vw;
-      top: 10px;
-      height: 25vh;
+      background: linear-gradient(
+        359deg,
+        rgb(93, 140, 170),
+        rgba(255, 0, 0, 0) 10%
+      );
     }
   }
 
   nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 10px;
-    margin-left: calc((25vh / 1.55) + 10vw);
-    width: calc(85vw - (25vh / 1.55));
+    width: 90%;
     height: 25vh;
+    background-size: 200% 200%;
     background: linear-gradient(
       359deg,
       rgb(93, 140, 170),
       rgba(255, 0, 0, 0) 10%
     );
+    animation-name: nav_apparition;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  #nav__links {
+    width: 5%;
+    height: 100%;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
   }
 
   #main__concept {
     width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-around;
   }
-  #main__concept--img {
+  #main__concept--image {
     width: 25%;
     margin-left: 2.5%;
-    content: url("/assets/lyon.jpeg");
+    content: url("/assets/lyonPaysageFin.jpg");
+  }
+
+  #main__produits {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   #main__produits--BO {
@@ -426,4 +537,115 @@ span {
   #main__produits--Bracelet {
     content: url("./assets/BraceletDesktopFin.jpg");
   }
+  #main__produits--images {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .main__produits--images--container {
+    position: relative;
+    width: 30%;
+  }
+
+  .main__produits--images--title {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .main__produits--images--title:hover {
+    background-color: hsla(0, 0%, 0%, 30%);
+  }
+
+  .main__produits--images--title h2 {
+    margin: 0;
+    color: white;
+    opacity: 100%;
+  }
+
+  .main__produits--images--container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+  }
+
+  #main__creatrice {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-around;
+  }
+  #main__creatrice--image {
+    width: 25%;
+    margin-left: 2.5%;
+    content: url("/assets/Marine-Gueydan.jpg");
+  }
+
+  #main__logo {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-around;
+  }
+  #main__logo--image {
+    width: 35%;
+    content: url("/assets/logo.png");
+  }
+  #main__temoins {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+  }
+  #main__temoins p {
+    width: 25%;
+  }
+
+  #main__temoins h2 {
+    width: 100%;
+  }
+
+  #main__temoins--textes {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  #instaLogo {
+    position: relative;
+    width: 20%;
+    left: 40%;
+  }
+}
+
+#titre__reseaux {
+  width: 100%;
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: hsl(203, 31%, 90%);
+}
+footer img {
+  width: 15%;
+}
+
+footer h3 {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
 }
