@@ -27,7 +27,7 @@ h4 {
   color: rgb(93, 140, 170);
 }
 p {
-  font-size: clamp(0.7rem, 1vw, 2.5rem);
+  font-size: clamp(0.7rem, 1.3vw, 2.5rem);
 }
 
 img {
@@ -41,6 +41,11 @@ body {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+}
+
+section {
+  margin: 10px 0;
+  width: 100%;
 }
 
 .accueil__logo--L {
@@ -269,11 +274,6 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
-  section {
-    margin: 10px 0;
-    width: 100%;
-  }
-
   h1,
   h2,
   p {
@@ -414,7 +414,8 @@ h1 {
     width: 50%;
     margin: 0 25%;
     height: auto;
-    content: url("/assets/Marine-Gueydan.jpg");
+    content: url("./assets/Marine-Gueydan.jpg");
+    border-radius: 100%;
   }
 
   #main__logo {
@@ -424,7 +425,7 @@ h1 {
   }
   #main__logo--image {
     width: 35%;
-    content: url("/assets/logo.png");
+    content: url("./assets/logo.png");
   }
   #main__temoins {
     width: 100%;
@@ -525,7 +526,7 @@ h1 {
   #main__concept--image {
     width: 25%;
     margin-left: 2.5%;
-    content: url("/assets/lyonPaysageFin.jpg");
+    content: url("./assets/lyonPaysageFin.jpg");
   }
 
   #main__produits {
@@ -594,7 +595,8 @@ h1 {
   #main__creatrice--image {
     width: 25%;
     margin-left: 2.5%;
-    content: url("/assets/Marine-Gueydan.jpg");
+    content: url("./assets/Marine-Gueydan.jpg");
+    border-radius: 100%;
   }
 
   #main__logo {
@@ -605,7 +607,7 @@ h1 {
   }
   #main__logo--image {
     width: 35%;
-    content: url("/assets/logo.png");
+    content: url("./assets/logo.png");
   }
   #main__temoins {
     width: 100%;
