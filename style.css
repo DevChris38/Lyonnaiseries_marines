@@ -525,7 +525,7 @@ h1 {
   #main__concept--image {
     width: 25%;
     margin-left: 2.5%;
-    content: url("/assets/lyonPaysageFin.jpg");
+    content: url("./assets/lyonPaysageFin.jpg");
   }
 
   #main__produits {
