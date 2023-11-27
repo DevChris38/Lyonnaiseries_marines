@@ -12,6 +12,11 @@
   font-family: "Quicksand-Regular", "Quicksand";
 }
 
+a {
+  text-decoration: none;
+  color: rgb(93, 140, 170);
+}
+
 h1 {
   font-size: clamp(1rem, 2.5vw, 2.5rem);
   text-align: center;
@@ -269,6 +274,37 @@ h1 {
   opacity: 0%;
   animation-duration: 1s;
   animation-delay: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#main__logo,
+#main__logo--image {
+  animation: title_apparition;
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#main__temoins,
+#main__temoins--image {
+  animation: title_apparition;
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#titre__reseaux,
+#instaLogo,
+footer {
+  animation: title_apparition;
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-delay: 7s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
@@ -570,7 +606,7 @@ h1 {
   }
 
   .main__produits--images--title:hover {
-    background-color: hsla(0, 0%, 0%, 30%);
+    border-image: fill 0 linear-gradient(#0003, #000);
   }
 
   .main__produits--images--title h2 {
