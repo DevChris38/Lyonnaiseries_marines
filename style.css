@@ -323,12 +323,13 @@ footer {
   }
 
   .accueil__logo {
-    height: 20vh;
+    height: 18vh;
+    margin-right: 2vw;
   }
 
   @keyframes logo_placement {
     from {
-      transform: translate(0, 200%) scale(3);
+      transform: translate(22vw, 26vh) scale(2);
     }
   }
 
@@ -502,7 +503,7 @@ footer {
 
   @keyframes logo_placement {
     from {
-      transform: translate(450%, 130%) scale(3);
+      transform: translate(40vw, 38vh) scale(3);
     }
   }
 
